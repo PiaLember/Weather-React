@@ -12,22 +12,24 @@ import "./Summary.css";
 export default function App() {
   return (
     <div className="App">
-      <div className="Weather">
-        <Buttons />
-        <Time />
-        <City />
-        <Summary />
+      <div className="container">
+        <div className="Weather">
+          <Buttons />
+          <Time />
+          <City />
+          <Summary />
+        </div>
+        <small className="Footer">
+          <a
+            href="https://github.com/PiaLember/Weather-React"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-source code
+          </a>
+          , by PiaL
+        </small>
       </div>
-      <small className="Footer">
-        <a
-          href="https://github.com/PiaLember/Weather-React"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Open-source code
-        </a>
-        , by PiaL
-      </small>
     </div>
   );
 }
