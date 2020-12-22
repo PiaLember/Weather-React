@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Buttons from "./Buttons";
+import "./Buttons.css";
+import Time from "./Time";
+import "./Time.css";
+import City from "./City";
+import "./City.css";
+import Summary from "./Summary";
+import "./Summary.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="Weather">
+        <Buttons />
+        <Time />
+        <City />
+        <Summary />
+      </div>
+      <small className="Footer">
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/PiaLember/FinalProject-Weather"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
-          Learn React
+          Open-source code
         </a>
-      </header>
+        , by PiaL
+      </small>
     </div>
   );
 }
-
-export default App;

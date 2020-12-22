@@ -1,0 +1,11 @@
+.time {
+  font-size: 28px;
+  padding-top: 54px;
+  padding-right: 10px;
+  font-family: "Source Code Pro", monospace;
+  color: #52057b;
+}
+#time {
+  margin-top: 16px;
+  margin-bottom: 4px;
+}

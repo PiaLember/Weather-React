@@ -1,0 +1,36 @@
+h1 {
+  font-size: 56px;
+  margin-top: 16px;
+  margin-bottom: 2px;
+  color: #52057b;
+}
+h2 {
+  margin-bottom: 10px;
+}
+h5 {
+  font-size: 16px;
+}
+p {
+  color: #52057b;
+  margin-top: 0;
+}
+p:first-letter {
+  text-transform: capitalize;
+}
+.summary {
+  margin-top: 8px;
+}
+.description {
+  color: #52057b;
+  float: right;
+  margin-right: 8px;
+}
+#icon {
+  font-size: 58px;
+  float: left;
+}
+#temp {
+  font-size: 56px;
+  padding-top: 28px;
+  color: #c060a1;
+}
