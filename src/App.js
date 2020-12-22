@@ -20,7 +20,7 @@ export default function App() {
       </div>
       <small className="Footer">
         <a
-          href="https://github.com/PiaLember/FinalProject-Weather"
+          href="https://github.com/PiaLember/Weather-React"
           target="_blank"
           rel="noreferrer"
         >
