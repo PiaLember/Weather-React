@@ -1,24 +1,14 @@
 import React from "react";
 import "./App.css";
-import Buttons from "./Buttons";
-import "./Buttons.css";
-import Time from "./Time";
-import "./Time.css";
-import City from "./City";
-import "./City.css";
-import Summary from "./Summary";
-import "./Summary.css";
+
+import Weather from "./Weather";
+import "./Weather.css";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="Weather">
-          <Buttons />
-          <Time />
-          <City />
-          <Summary />
-        </div>
+        <Weather defaultCity="Dallas" />
         <small className="Footer">
           <a
             href="https://github.com/PiaLember/Weather-React"
