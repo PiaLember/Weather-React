@@ -4,9 +4,7 @@ h1 {
   margin-bottom: 2px;
   color: #52057b;
 }
-h2 {
-  margin-bottom: 10px;
-}
+
 h5 {
   font-size: 16px;
 }
@@ -25,12 +23,20 @@ p:first-letter {
   float: right;
   margin-right: 8px;
 }
-#icon {
-  font-size: 58px;
-  float: left;
+.temperature {
+  margin-top: 38px;
 }
-#temp {
+.temp {
   font-size: 56px;
   padding-top: 28px;
   color: #c060a1;
+}
+.unit {
+  font-size: 28px;
+  position: relative;
+  top: -20px;
+}
+#icon {
+  font-size: 58px;
+  float: left;
 }
