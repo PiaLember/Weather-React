@@ -40,3 +40,24 @@ p:first-letter {
   font-size: 58px;
   float: left;
 }
+
+input[type="search"] {
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  height: 42px;
+  outline: 0;
+  padding: 10px;
+  width: 240px;
+}
+.city {
+  margin-top: 2px;
+}
+#search-button {
+  height: 42px;
+  color: #ffffff;
+  background-color: #52057b;
+  border-radius: 2px;
+  width: 80px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
