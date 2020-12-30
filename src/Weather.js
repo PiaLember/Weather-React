@@ -5,7 +5,6 @@ import "./Buttons.css";
 import Time from "./Time";
 import "./Time.css";
 import WeatherInfo from "./WeatherInfo";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -21,7 +20,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       feels: response.data.main.feels_like,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png#",
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 

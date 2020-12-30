@@ -24,7 +24,7 @@ p:first-letter {
   margin-right: 8px;
 }
 .temperature {
-  margin-top: 38px;
+  margin-top: 48px;
 }
 .temp {
   font-size: 56px;
@@ -36,10 +36,6 @@ p:first-letter {
   position: relative;
   top: -20px;
 }
-#icon {
-  font-size: 58px;
-  float: left;
-}
 
 input[type="search"] {
   border-radius: 2px;
@@ -49,6 +45,10 @@ input[type="search"] {
   outline: 0;
   padding: 10px;
   width: 240px;
+}
+#icon {
+  margin-right: -16px;
+  margin-left: -16px;
 }
 .city {
   margin-top: 2px;
