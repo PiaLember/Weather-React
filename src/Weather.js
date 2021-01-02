@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Buttons from "./Buttons";
 import "./Buttons.css";
 import Time from "./Time";
 import "./Time.css";
 import WeatherInfo from "./WeatherInfo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -40,10 +41,42 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function currentLocation(position) {
+    console.log(position);
+    const apiKey = "657e61445d4323be17aa0392f7a7870c";
+    const longitude = position.coords.longitude;
+    const latitude = position.coords.latitude;
+    const units = "metric";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function showCurrentLocation(event) {
+    navigator.geolocation.getCurrentPosition(currentLocation);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <Buttons />
+        <span className="buttons">
+          <button type="button" className="btn btn-outline-dark" id="celsius">
+            °C
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-dark"
+            id="fahrenheit"
+          >
+            °F
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-dark"
+            id="current-location"
+            onClick={showCurrentLocation}
+          >
+            <FontAwesomeIcon icon={faMapMarkerAlt} />
+          </button>
+        </span>
         <Time date={weatherData.date} />
         <form className="city" id="search" onSubmit={handleSubmit}>
           <input
