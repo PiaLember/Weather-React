@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Buttons.css";
+
 import Time from "./Time";
 import "./Time.css";
 import WeatherInfo from "./WeatherInfo";
@@ -57,27 +57,8 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <span className="buttons">
-          <button type="button" className="btn btn-outline-dark" id="celsius">
-            °C
-          </button>
-          <button
-            type="button"
-            className="btn btn-outline-dark"
-            id="fahrenheit"
-          >
-            °F
-          </button>
-          <button
-            type="button"
-            className="btn btn-outline-dark"
-            id="current-location"
-            onClick={showCurrentLocation}
-          >
-            <FontAwesomeIcon icon={faMapMarkerAlt} />
-          </button>
-        </span>
         <Time date={weatherData.date} />
+
         <form className="city" id="search" onSubmit={handleSubmit}>
           <input
             type="search"
@@ -89,6 +70,17 @@ export default function Weather(props) {
           />
           <input type="submit" value="Search" id="search-button" />
         </form>
+        <span className="buttons">
+          <button
+            type="button"
+            className="btn btn-outline-dark"
+            id="current-location"
+            onClick={showCurrentLocation}
+          >
+            <FontAwesomeIcon icon={faMapMarkerAlt} />
+          </button>
+        </span>
+
         <WeatherInfo data={weatherData} />
       </div>
     );
