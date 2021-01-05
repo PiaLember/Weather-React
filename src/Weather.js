@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-
 import Time from "./Time";
 import "./Time.css";
 import WeatherInfo from "./WeatherInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -82,6 +82,7 @@ export default function Weather(props) {
         </span>
 
         <WeatherInfo data={weatherData} />
+        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {

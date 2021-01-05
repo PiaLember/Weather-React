@@ -21,7 +21,7 @@ p:first-letter {
 }
 .description {
   color: #52057b;
-  float: right;
+
   margin-right: 8px;
 }
 .temperature {
