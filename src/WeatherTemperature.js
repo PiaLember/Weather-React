@@ -13,6 +13,9 @@ export default function WeatherTemperature(props) {
   function fahrenheitFeel() {
     return (props.realFeel * 9) / 5 + 32;
   }
+  function fahrenheitWind() {
+    return props.wind * 2.237;
+  }
 
   function showCelsius(event) {
     event.preventDefault();
@@ -35,6 +38,10 @@ export default function WeatherTemperature(props) {
           </span>
         </div>
         <p id="real-feel">Real Feel {Math.round(props.realFeel)}°</p>
+        <div className="description">
+          <p id="humidity">Humidity: {Math.round(props.humidity)}%</p>
+          <p id="wind">Wind speed: {Math.round(props.wind)} m/s</p>
+        </div>
       </div>
     );
   } else {
@@ -53,6 +60,10 @@ export default function WeatherTemperature(props) {
           </span>
         </div>
         <p id="real-feel">Real Feel {Math.round(fahrenheitFeel())}°</p>
+        <div className="description">
+          <p id="humidity">Humidity: {Math.round(props.humidity)}%</p>
+          <p id="wind">Wind speed: {Math.round(fahrenheitWind())} mph</p>
+        </div>
       </div>
     );
   }

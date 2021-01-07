@@ -19,11 +19,9 @@ export default function WeatherInfo(props) {
         <WeatherTemperature
           celsius={props.data.temperature}
           realFeel={props.data.feels}
+          humidity={props.data.humidity}
+          wind={props.data.wind}
         />
-        <div className="description">
-          <p id="humidity">Humidity: {Math.round(props.data.humidity)}%</p>
-          <p id="wind">Wind speed: {Math.round(props.data.wind)} m/s</p>
-        </div>
       </div>
     </div>
   );
