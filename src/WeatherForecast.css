@@ -1,6 +1,12 @@
 .weatherForecast {
   float: right;
-  margin-top: 84px;
+  margin-top: -328px;
+}
+@media only screen and (max-device-width: 480px) {
+  .weatherForecast {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 .weatherForecastPreview {
   border: 1px solid #52057b;

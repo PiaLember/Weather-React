@@ -2,6 +2,11 @@
   margin: 20px auto;
   max-width: 620px;
 }
+@media only screen and (max-device-width: 480px) {
+  .Weather {
+    height: 732px;
+  }
+}
 
 .Weather {
   background-image: linear-gradient(

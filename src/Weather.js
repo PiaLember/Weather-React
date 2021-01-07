@@ -57,7 +57,6 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <WeatherForecast city={weatherData.city} />
         <Time date={weatherData.date} />
 
         <form className="city" id="search" onSubmit={handleSubmit}>
@@ -83,6 +82,7 @@ export default function Weather(props) {
         </span>
 
         <WeatherInfo data={weatherData} />
+        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {
