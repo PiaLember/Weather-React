@@ -21,6 +21,7 @@ export default function WeatherInfo(props) {
           realFeel={props.data.feels}
           humidity={props.data.humidity}
           wind={props.data.wind}
+          city={props.data.city}
         />
       </div>
     </div>

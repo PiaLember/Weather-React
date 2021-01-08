@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import WeatherForecast from "./WeatherForecast";
+import FahrenheitForecast from "./FahrenheitForecast";
 
 export default function WeatherTemperature(props) {
   const [unit, setUnit] = useState("celsius");
@@ -41,6 +43,7 @@ export default function WeatherTemperature(props) {
         <div className="description">
           <p id="humidity">Humidity: {Math.round(props.humidity)}%</p>
           <p id="wind">Wind speed: {Math.round(props.wind)} m/s</p>
+          <WeatherForecast city={props.city} />
         </div>
       </div>
     );
@@ -63,6 +66,7 @@ export default function WeatherTemperature(props) {
         <div className="description">
           <p id="humidity">Humidity: {Math.round(props.humidity)}%</p>
           <p id="wind">Wind speed: {Math.round(fahrenheitWind())} mph</p>
+          <FahrenheitForecast city={props.city} />
         </div>
       </div>
     );

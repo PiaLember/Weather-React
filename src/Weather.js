@@ -5,7 +5,6 @@ import "./Time.css";
 import WeatherInfo from "./WeatherInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -42,7 +41,6 @@ export default function Weather(props) {
   }
 
   function currentLocation(position) {
-    console.log(position);
     const apiKey = "657e61445d4323be17aa0392f7a7870c";
     const longitude = position.coords.longitude;
     const latitude = position.coords.latitude;
@@ -82,7 +80,6 @@ export default function Weather(props) {
         </span>
 
         <WeatherInfo data={weatherData} />
-        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {
