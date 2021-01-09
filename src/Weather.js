@@ -5,6 +5,7 @@ import "./Time.css";
 import WeatherInfo from "./WeatherInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import Loader from "./Loader";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -84,6 +85,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return <Loader />;
   }
 }

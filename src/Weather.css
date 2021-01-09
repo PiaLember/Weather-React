@@ -21,12 +21,13 @@ p:first-letter {
   margin-right: 8px;
 }
 .temperature {
-  margin-top: 48px;
+  margin-top: 58px;
 }
 .temp {
   font-size: 56px;
   padding-top: 28px;
   color: #c060a1;
+  padding-left: 8px;
 }
 .unit {
   font-size: 22px;
@@ -85,6 +86,7 @@ input[type="search"] {
 }
 #real-feel {
   margin-bottom: 0;
+  margin-top: 20px;
 }
 #humidity {
   margin-bottom: 0;

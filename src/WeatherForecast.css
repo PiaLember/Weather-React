@@ -1,11 +1,14 @@
 .weatherForecast {
   float: right;
-  margin-top: -328px;
+  margin-top: -318px;
+  margin-right: 28px;
+  width: 260px;
 }
 @media only screen and (max-device-width: 480px) {
   .weatherForecast {
     width: 100%;
     margin-top: 0;
+    margin-right: 0;
   }
 }
 .weatherForecastPreview {
@@ -21,29 +24,32 @@
   );
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
+
 .forecast-temp {
-  font-size: 16px;
-  margin-top: 4px;
+  font-size: 18px;
+  margin-right: 52px;
   color: #c060a1;
-  padding-right: 6px;
+  text-align: left;
 }
 .forecast-hours {
-  float: right;
+  margin-top: 6px;
   color: #52057b;
-  padding-right: 6px;
-  padding-left: 8px;
+  margin-right: 4px;
+  float: right;
+}
+
+.forecast-day {
+  color: #52057b;
+  font-size: 14px;
 }
 
 #forecast-icon {
-  margin-right: 4px;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
+  margin-right: 6px;
 }
-#forecast-day {
-  color: #52057b;
-  font-size: 14px;
-  text-align: center;
-}
+
 #next-hours {
   margin-bottom: 0px;
+  color: #c060a1;
 }

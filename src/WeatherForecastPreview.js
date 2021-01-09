@@ -1,5 +1,4 @@
 import React from "react";
-import "./WeatherForecast.css";
 
 export default function WeatherForecastPreview(props) {
   function temperature() {
@@ -33,7 +32,7 @@ export default function WeatherForecastPreview(props) {
         alt={`http://openweathermap.org/img/wn/${props.data.weather[0].description}@2x.png`}
       />
       <span className="forecast-temp">{temperature()}</span>
-      <span id="forecast-day">{forecastDay()}</span>
+      <span className="forecast-day">{forecastDay()}</span>
       <span className="forecast-hours">{hours()}</span>
     </div>
   );
